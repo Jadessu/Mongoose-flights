@@ -1,0 +1,71 @@
+html,body {
+  height:100%;
+  width:100%;
+  margin:0;
+  background: #141E30;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  color: white;
+}
+
+body {
+  display:flex;
+}
+
+main{
+  margin: auto;
+}
+
+form{
+  /* background-color: blue; */
+  text-align: center;
+  justify-content: center;
+  border-radius: 42px;
+background: linear-gradient(145deg, #342552, #2c2045);
+box-shadow:  26px 26px 47px #251a3a,
+             -26px -26px 47px #3d2c60;
+             font-size: 1.6rem;
+}
+       
+  h1{
+    text-align: center; 
+    color: #fff; 
+    font-weight: normal; 
+    margin-bottom: 50px;
+
+    border-radius: 42px;
+background: linear-gradient(145deg, #372856, #2e2148);
+box-shadow:  14px 14px 28px #2a1f42,
+             -14px -14px 28px #3c2b5e;
+  }
+
+  input{
+    width: 100%; 
+    padding: 6px 15px; 
+    box-sizing: border-box; 
+    margin-bottom: 20px; 
+    font-size: 16px; 
+    color: #fff;
+    border-radius: 42px;
+background: #31234d;
+box-shadow: inset 26px 26px 47px #251a3a,
+            inset -26px -26px 47px #3d2c60;
+  }
+
+  .btn{
+    border-radius: 42px;
+    background: linear-gradient(145deg, #342552, #2c2045);
+    box-shadow:  26px 26px 47px #251a3a,
+                 -26px -26px 47px #3d2c60;
+                 color: white;
+  }
+
+  .btn:hover{
+    background-color: darkblue;
+  }
+
+
+  ::placeholder{color: #fff;}
+        
+  

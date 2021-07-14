@@ -1,0 +1,49 @@
+
+<%-include("../partials/header")  %> 
+<%-include("../partials/nav")  %> 
+
+
+<main>
+<h1> <%= title %> </h1>
+<section>
+    <div>Airline:</div>
+    <div><%= flight.airline %></div>
+    <div>Airport:</div>
+    <div><%= flight.airport %></div>
+    <div> Flight Number:</div>
+    <div><%= flight.flightNo %></div>
+    <div> Departure:</div>
+    <div><%= flight.departs.toString() %></div>
+</section>
+
+<form action="/flights/<%= flight._id %>/tickets" method="POST">
+<label for="seat">Seat:</label>
+<input id = "seat" name = "seat" required pattern= "[A-F][1-9]\d?" title ="Please Enter a seat with letters A-F and numbers 1-9" placeholder="A1 - F9">
+<label for="price">Price:</label>
+<input type="number" name="price" id="price" min="0" placeholder="$0.00">
+<button type = "submit">Add Ticket</button>
+</form>
+<% if (flight.tickets.length) { %>
+    <table>
+    <thead>
+        <tr>
+        <th>Date</th>
+        <th>Seat</th>
+        <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% flight.tickets.forEach(function(ticket) { %>
+        <tr>
+            <td><%= ticket.createdAt.toLocaleDateString() %></td>
+            <td><%= ticket.seat %></td>
+            <td><%= ticket.price %></td>
+        </tr>
+        <% }) %>
+    </tbody>
+    </table>
+<% } else { %>
+    <h3>No Ticket Yet</h3>
+<% } %>
+</main>
+
