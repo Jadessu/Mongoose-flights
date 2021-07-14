@@ -20,10 +20,6 @@ const ticketSchema = new Schema({
 })
 
 const flightSchema = new Schema({
-    // airline: String,
-    // airport: String,
-    // flightNo: Number,
-    // departs: Date,
     airline: {
         type: String,
         enum: ["American", "Southwest", "United"],
