@@ -5,21 +5,22 @@
 
 <%-include("../partials/nav")  %> 
 <main>
+  
   <div class = "flex-wrap">
     <h1 class = "title">Add a New Flight</h1>
     
   <form action="/flights" method="POST">
 
     <label>Airline:
-      <input type="text" name="airline">
+      <input type="text" name="airline" placeholder="American, Southwest, United" >
     </label><br>
 
     <label>Airport:
-      <input type="text" name="airport">
+      <input type="text" name="airport" placeholder="AUS, DFW, DEN, LAX, SAN">
     </label><br>
 
     <label>Flight Number:
-      <input type="number" name="flightNo">
+      <input type="number" name="flightNo" placeholder="Min-10 Max-9999">
     </label><br>
 
     <label>Departs:
@@ -31,35 +32,4 @@
   </div>
 </main>
 
-<!-- <form>
-  <div class="form-group">
-    <label>Airline:
-      <input type="text" name="airline">
-    </label>
-  </div>
-  <div class="form-group">
-    <label>Airport:
-      <input type="text" name="airport">
-    </label><br>
-  </div>
-  <div class="form-group">
-    <label>Flight Number:
-      <input type="number" name="flightNo">
-    </label><br>
-  </div>
-  <div class="form-group">
-    <label>Departs:
-      <input type="date" name="departs">
-    </label><br>
-  </div>
-
-  </div>
-  <button type="submit" class="btn btn-primary">Add Flight</button>
-</form> -->
-
-
-
-
- 
-</body>
-</html>
+<%- include('../partials/footer') %>

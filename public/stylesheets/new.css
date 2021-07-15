@@ -13,9 +13,54 @@ body {
   display:flex;
 }
 
-main{
-  margin: auto;
+body > nav {
+    margin-left: auto;
+  
+  
 }
+
+nav > i {
+  width: 34px;
+  object-fit: contain;
+  margin-right: auto;
+  
+}
+
+nav > a {
+  margin: 20px;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+}
+
+nav > a:visited {
+  color: white;
+}
+
+nav > a:hover {
+  color: white;
+  background-color: #1d002b;
+}
+
+nav > a.active {
+  color: #FF6A3D;
+  font-weight: bold;
+}
+
+
+
+
+main{
+  /* margin: auto; */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* margin-left: 300px; */
+}
+
+
 
 form{
   /* background-color: blue; */
@@ -63,9 +108,16 @@ box-shadow: inset 26px 26px 47px #251a3a,
 
   .btn:hover{
     background-color: darkblue;
+    color: white;
+    transform: scale(1.2);
   }
 
 
-  ::placeholder{color: #fff;}
-        
+  ::placeholder{
+    color: white;
+    opacity: 20%;
+    text-align: center;
+  }
+
+  
   

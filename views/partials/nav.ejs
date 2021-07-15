@@ -1,7 +1,19 @@
+<link rel="stylesheet" href="/stylesheets/nav.css" />
 </head>
 <body>
 <nav>
-    <a href="/flights/new">New flights</a>
-    <a href="/flights">All flights</a>
-    <a href="/destinations/new">Add a destination</a>
+    
+    <a 
+        href="/" <%- title === 'Home' ? 'class="active"' : '' %>
+    >HOME</a> 
+    <a 
+        href="/flights" <%- title === 'All Flights' ? 'class="active"' : '' %>
+    >ALL FLIGHTS</a>
+    <a 
+        href="/flights/new" <%- title === 'Add Flight' ? 'class="active"' : '' %>
+    >ADD FLIGHT</a>
+    <a 
+        href="/destinations/new" <%- title === 'Add Destination' ? 'class="active"' : '' %>
+    >ADD DESTINATION</a>
+    
     </nav>

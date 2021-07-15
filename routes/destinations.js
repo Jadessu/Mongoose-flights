@@ -9,4 +9,5 @@ export {
 const router = Router()
 
 router.get("/new", destinationsCtrl.new)
+router.post("/", destinationsCtrl.create)
 

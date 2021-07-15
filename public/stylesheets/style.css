@@ -8,7 +8,7 @@
 
 header{
   background-image:
-      linear-gradient(rgba(0, 0, 0, 0.62), rgba(0, 0, 0, 0.52)), url("/images/airport.jpg");
+      linear-gradient(rgba(7, 0, 15, 0.82), rgba(6, 0, 24, 0.72)), url("/images/airport.jpg");
   height: 100vh;
   background-size: cover;
   background-position: center;
@@ -17,7 +17,7 @@ header{
 
 
 #express{
-  color: rgb(102, 81, 81);
+ opacity: 5%;
 }
 
 .title{
@@ -93,6 +93,8 @@ display: inline;
 .btn:active{
   transform: scale(1.2);
 }
+
+
   
   
 

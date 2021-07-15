@@ -1,20 +1,40 @@
 <%-include("../partials/header")  %> 
+<link rel="stylesheet" href="/stylesheets/index.css" />
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
 <%-include("../partials/nav")  %> 
 
-    <h1>Flights</h1>
-    <table>
-        <tbody>
-    <% flights.forEach(flight => { %>
-        <tr>
-            <td> <%=flight.airline%></td> 
-            <td> <%=flight.airport%></td> 
-            <td> <%=flight.flightNo%></td> 
-            <td> <%=flight.departs.toString()%></td>
-            <td> <a href="/flights/<%= flight._id %>">DETAILS</a> </td>
-        </tr>
-   <% }) %>
-</tbody>
-</table>
+    <main>
+        <h1><%= title %></h1>
+        <table id="list">
+          <thead>
+            <tr>
+              <th>Airline</th>
+              <th>Airport</th>
+              <th>FlightNo</th>
+              <th>Departs</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% flights.forEach((flight) => { %>
+            <tr>
+              <td><%= flight.airline %></td>
+              <td><%= flight.airport %></td>
+              <td><%= flight.flightNo %></td>
+              <td><%= flight.departs %></td>
+              <td>
+                <a href="/flights/<%= flight._id %>">DETAILS</a>
+              </td>
+              <td>
+                <form action="/flights/<%= flight._id %>?_method=DELETE" class="delete-form" method="POST">
+                    <button type="button" class="btn btn-primary" type = "submit">Delete</button>                    </form>
+              </td>
+            </tr>
+            <% }) %>
+          </tbody>
+        </table>
+      </main>
+      
 
-</body>
-</html>
+<%- include('../partials/footer') %>

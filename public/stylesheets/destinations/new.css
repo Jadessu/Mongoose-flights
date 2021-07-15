@@ -1,19 +1,106 @@
+html,body {
+  height:100%;
+  width:100%;
+  margin:0;
+  background: #141E30;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+  color: white;
+}
+
+body {
+  display:flex;
+}
+
+body > nav {
+    margin-left: auto;
+  
+  
+}
+
+nav > i {
+  width: 34px;
+  object-fit: contain;
+  margin-right: auto;
+  
+}
+
+nav > a {
+  margin: 20px;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+}
+
+nav > a:visited {
+  color: white;
+}
+
+nav > a:hover {
+  color: white;
+  background-color: #1d002b;
+}
+
+nav > a.active {
+  color: #FF6A3D;
+  font-weight: bold;
+}
+
+main{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center ;
+  text-align: center;
+  border-radius: 50px;
+background: #212e45;
+box-shadow: inset 20px 20px 60px #1c273b,
+            inset -20px -20px 60px #26354f;
+
+}
+
 form {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 1.6rem;
-    margin-bottom: 2rem
-  }
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 1.6rem;
+  margin-bottom: 2rem
+}
+
+form * {
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 2rem;
+  border-radius: 50px;
+background: #212e45;
+box-shadow:  20px 20px 60px #1c273b,
+             -20px -20px 60px #26354f;
+             color: white
+
+}
+
+form > button {
+  font-size: 1.6rem;
+  width: 16rem;
+  grid-column: 2 / 3;
+  margin-bottom: 2.4rem;
+}
+
+#add-dest-btn {
+  background-color: #212e45;
+  cursor: pointer;
   
-  form * {
-    padding: 5px;
-    border-radius: 5px;
-    font-size: 2rem;
-  }
-  
-  form > button {
-    font-size: 1.6rem;
-    width: 16rem;
-    grid-column: 2 / 3;
-    margin-bottom: 2.4rem;
-  }
+}
+
+#add-dest-btn:hover {
+  background-color: #021c3a;
+  transform: scale(1.1)
+}
+
+
